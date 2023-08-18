@@ -7,6 +7,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// @BasePath /api/v1
+
+// @Summary List all opportunities
+// @Description List all job opportunities
+// @Tags Opportunities
+// @Accept json
+// @Produce json
+// @Success 200 {object} GetAllOpportunities
+// @Failures 500 {object} ErrorResponse
+// @Router /opportunities [get]
 func GetAllOpportunityHandler(ctx *gin.Context) {
 	opportunities := []schemas.Opportunity{}
 

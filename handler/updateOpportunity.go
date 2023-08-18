@@ -8,6 +8,20 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// @BasePath /api/v1
+
+// @Summary Update opportunity
+// @Description Update a new job opportunity
+// @Tags Opportunities
+// @Accept json
+// @Produce json
+// @Param id query string true "Opportunity identification"
+// @Param request body UpdateOpportunityRequest true "Request Body"
+// @Success 200 {object} UpdateOpportunityResponse
+// @Failures 400 {object} ErrorResponse
+// @Failures 404 {object} ErrorResponse
+// @Failures 500 {object} ErrorResponse
+// @Router /opportunity [put]
 func UpdateOpportunityHandler(ctx *gin.Context) {
 	request := UpdateOpportunityRequest{}
 

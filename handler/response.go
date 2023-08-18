@@ -48,3 +48,8 @@ type GetAllOpportunitiesResponse struct {
 	Message string                        `json:"message"`
 	Data    []schemas.OpportunityResponse `json:"data"`
 }
+
+type UpdateOpportunityResponse struct {
+	Message string                      `json:"message"`
+	Data    schemas.OpportunityResponse `json:"data"`
+}

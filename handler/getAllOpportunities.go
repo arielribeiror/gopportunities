@@ -14,7 +14,7 @@ import (
 // @Tags Opportunities
 // @Accept json
 // @Produce json
-// @Success 200 {object} GetAllOpportunities
+// @Success 200 {object} GetAllOpportunitiesResponse
 // @Failures 500 {object} ErrorResponse
 // @Router /opportunities [get]
 func GetAllOpportunityHandler(ctx *gin.Context) {

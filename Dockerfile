@@ -1,11 +1,11 @@
 # Create Builder Image, to compile the source code into an executable
-FROM golang:1.17-alpine as builder
+FROM golang:1.20-alpine as builder
 RUN apk add --no-cache gcc musl-dev
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
-RUN CGO_ENABLED=1 GOOS=linux go build -a -installsuffix cgo -o main .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -o main .
 
 # Create the final image, running the API and exposing port 8080
 FROM alpine:latest
